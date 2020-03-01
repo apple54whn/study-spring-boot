@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/"
-      xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro">
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
     <meta charset="UTF-8">
     <title>index</title>
 </head>
 <body>
 <h1 th:text="'欢迎 '+${username == null ?'': username}"></h1>
+<p shiro:authenticated="">
+    Hello, <span shiro:principal=""></span>, how are you today?
+</p>
 
 
 <a href="/login">登录</a>
