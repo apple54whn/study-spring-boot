@@ -1,0 +1,23 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: shiro
+  datasource:
+    url: jdbc:mysql://localhost:3306/study-shiro?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+  thymeleaf:
+    cache: false
+
+
+shiro:
+  enabled: true # 默认为true
+  loginUrl: /login
+  successUrl: /index
+  unauthorizedUrl: /401
+
+
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"
+      xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1 th:text="'欢迎 '+${username == null ?'': username}"></h1>
+
+
+<a href="/login">登录</a>
+<br/>
+<a href="/look">随便逛逛</a>
+<br/>
+<a href="/user" shiro:hasPermission="user:update">查看用户信息</a>
+<br/>
+<a href="/user/update" shiro:hasPermission="user:update" >修改用户信息</a>
+<br/>
+<a href="/user/logout" >注销</a>
+<br/>
+
+</body>
+</html>
