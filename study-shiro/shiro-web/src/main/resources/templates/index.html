@@ -8,7 +8,7 @@
 <body>
 <h1 th:text="'欢迎 '+${username == null ?'': username}"></h1>
 <p shiro:authenticated="">
-    Hello, <span shiro:principal=""></span>, how are you today?
+    Hello, <span shiro:principal="" property="name"></span>, how are you today?
 </p>
 
 
